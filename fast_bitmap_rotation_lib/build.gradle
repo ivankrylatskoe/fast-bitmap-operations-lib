@@ -28,6 +28,3 @@ android {
         checkReleaseBuilds false
     }
 }
-repositories {
-    mavenCentral()
-}
