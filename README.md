@@ -1,8 +1,15 @@
 # Fast Bitmap Rotation Library
-**Target platform: **Android
-**Algorithms:** currently supports only 180 degrees rotation.
-**Limitations:** only in place rotation (without allocating additional memory).
+
+**Target platform:** Android
+
+**Algorithms:** Currently only 180 degrees rotations are supported.
+
+**Limitations:** Only in place rotations (without allocating additional memory).
+
 **Implementation:** C++ library for Java.
+
+**Applications:** Useful for camera applications.
+
 
 #### Performance (approximately)
 * 5 times faster than Matrix rotation method.
