@@ -1,0 +1,31 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion propCompileSdkVersion
+    buildToolsVersion propBuildToolsVersion
+
+    defaultConfig {
+        applicationId "com.ivankrylatskoe.test_fast_bitmap_rotation_lib"
+        minSdkVersion 25
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        renderscriptTargetApi 25
+        ndk {
+            abiFilters "x86", "armeabi-v7a"
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':fast_bitmap_rotation_lib')
+}
+repositories {
+    mavenCentral()
+}
