@@ -1,13 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion propCompileSdkVersion
-    buildToolsVersion propBuildToolsVersion
-
     defaultConfig {
         applicationId "com.ivankrylatskoe.test_fast_bitmap_rotation_lib"
         minSdkVersion 25
-        targetSdkVersion 30
+        compileSdkVersion 27
         versionCode 1
         versionName "1.0"
         renderscriptTargetApi 25

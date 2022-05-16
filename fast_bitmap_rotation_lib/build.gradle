@@ -4,8 +4,9 @@ version '0.0.1'
 group 'com.jni.fast_bitmap_rotation_lib'
 
 android {
-
     defaultConfig {
+        compileSdkVersion 27
+
         ndk {
             moduleName "JniFastBitmapRotationLib"
             ldLibs "log", "jnigraphics"
