@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     defaultConfig {
-        applicationId "com.ivankrylatskoe.test_fast_bitmap_rotation_lib"
+        applicationId "com.ivankrylatskoe.test_fast_bitmap_operations_lib"
         minSdkVersion 25
         compileSdkVersion 27
         versionCode 1
@@ -21,7 +21,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(':fast_bitmap_rotation_lib')
+    implementation project(':fast_bitmap_operations_lib')
 }
 repositories {
     mavenCentral()

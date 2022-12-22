@@ -1,4 +1,4 @@
-package com.ivankrylatskoe.test_fast_bitmap_rotation_lib.rotators;
+package com.ivankrylatskoe.test_fast_bitmap_operations_lib.rotators;
 
 import android.graphics.Bitmap;
 import android.graphics.Matrix;

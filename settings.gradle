@@ -1,2 +1,2 @@
 include ':app'
-include ':fast_bitmap_rotation_lib'
+include ':fast_bitmap_operations_lib'

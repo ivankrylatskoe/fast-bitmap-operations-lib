@@ -1,4 +1,4 @@
-package com.ivankrylatskoe.test_fast_bitmap_rotation_lib;
+package com.ivankrylatskoe.test_fast_bitmap_operations_lib;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -6,9 +6,9 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.ivankrylatskoe.test_fast_bitmap_rotation_lib.rotators.FastBitmapRotationLibRotator;
-import com.ivankrylatskoe.test_fast_bitmap_rotation_lib.rotators.IRotator;
-import com.ivankrylatskoe.test_fast_bitmap_rotation_lib.rotators.MatrixRotator;
+import com.ivankrylatskoe.test_fast_bitmap_operations_lib.rotators.FastBitmapOperationsLibRotator;
+import com.ivankrylatskoe.test_fast_bitmap_operations_lib.rotators.IRotator;
+import com.ivankrylatskoe.test_fast_bitmap_operations_lib.rotators.MatrixRotator;
 
 public class MainActivity extends Activity {
 
@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
     private void testRotation(final TextView textView) {
         new Thread(new Runnable() {
             public void run() {
-                final long fastBitmapRotationLibTime = estimateRotatorTime(new FastBitmapRotationLibRotator());
+                final long fastBitmapRotationLibTime = estimateRotatorTime(new FastBitmapOperationsLibRotator());
                 final long matrixRotationTime = estimateRotatorTime(new MatrixRotator());
 
                 runOnUiThread(new Runnable() {
@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
 
         // Rotate bitmaps
         testImgMatrix = (new MatrixRotator()).rotate180(testImgMatrix);
-        testImgFast = (new FastBitmapRotationLibRotator()).rotate180(testImgFast);
+        testImgFast = (new FastBitmapOperationsLibRotator()).rotate180(testImgFast);
 
         if (testImgMatrix.getWidth() != testImgFast.getWidth() || testImgMatrix.getHeight() != testImgFast.getHeight())
             return false;
