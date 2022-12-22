@@ -1,4 +1,4 @@
-# Fast Bitmap Operations Library
+# Fast Bitmap Operations Library for Android
 This is a collection of fast operations with images optimized for the maximum performance on Android.
 The alorithms are written in C++ and available using JNI.
 
