@@ -1,2 +1,4 @@
 include ':app'
 include ':fast_bitmap_operations_lib'
+include ':OpenCV'
+include ':OpenCV'

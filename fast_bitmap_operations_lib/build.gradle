@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+
+version '0.0.1'
+group 'com.jni.fast_bitmap_operations_lib'
+
+android {
+    defaultConfig {
+        compileSdkVersion 27
+
+        ndk {
+            moduleName "JniFastBitmapOperationsLib"
+            ldLibs "log", "jnigraphics"
+            abiFilters "x86", "armeabi-v7a", "x86_64", "arm64-v8a","armeabi-v7a"
+        }
+        externalNativeBuild {
+            ndkBuild {
+                cppFlags ''
+                arguments "NDK_OUT=${projectDir}/src/main/lib"
+            }
+        }
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path file('src/main/jni/Android.mk')
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+}
