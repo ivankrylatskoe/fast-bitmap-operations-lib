@@ -8,9 +8,7 @@ android {
         versionCode 1
         versionName "1.0"
         renderscriptTargetApi 25
-        ndk {
-            abiFilters "x86", "armeabi-v7a"
-        }
+
     }
     lintOptions {
         checkReleaseBuilds false
@@ -22,6 +20,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':fast_bitmap_operations_lib')
+    implementation project(':OpenCV')
 }
 repositories {
     mavenCentral()
