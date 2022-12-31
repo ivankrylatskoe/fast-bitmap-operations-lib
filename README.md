@@ -7,18 +7,24 @@ The alorithms are written in C++ and available using JNI.
 ### 1. 180 degrees inplace rotation
 
 #### Performance (approximately)
-* 5 times faster than Matrix rotation method.
-* 3.8 times faster than Ndk rotation method.
-* 3.3 times faster than OpenCV rotation method.
+Test were performed on an image with dimensions 1920x1080.
+Average methods' times (based on 10 test runs):
+* Fast Operations Library: 2.2-2.6 ms (the fastest method)
+* OpenCV: 8.9-9.6 ms (3.5-4.3 times slower than Fast Operations Library)
+* Matrix method: 23-27 ms (9.9-12.4 times slower than Fast Operations Library)
 
 ### 2. Scaling down by factor of 2.25 using INTER_AREA interpolation
 #### Performance (approximately)
-* 3.2 - 3.6 times faster than OpenCV implementation
+Test were performed on an image with dimensions 1440x1080.
+Average methods' times (based on 10 test runs):
+* Fast Operations Library: 6.4-7.0 ms (the fastest method)
+* OpenCV: 42-51 ms (6.1-7.8 times slower than Fast Operations Library)
 
 
 ## How to run the application and check performance
 Clone the project, open it in Android Studio and run.
-Wait approximately 20 seconds and the results will be on the screen.
+Wait approximately 20 seconds and the results will be shown on the screen.
+The tests will run cyclically.
 
 ## How to use the library in your project
 * Add the following line: `include ':fast_bitmap_operations_lib'` to `settings.graddle` file.
